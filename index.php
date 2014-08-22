@@ -135,6 +135,8 @@
             print $output['content'];
         } elseif ($route->controller=='input' && $route->action=='bulk') {
             print $output['content'];
+        } elseif ($route->controller=='pills' && $route->action=='configure') {
+            print json_encode($output['content'], JSON_NUMERIC_CHECK);
         } else {
             print json_encode($output['content']);
         }
